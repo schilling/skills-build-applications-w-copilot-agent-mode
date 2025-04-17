@@ -3,7 +3,7 @@ from octofit_tracker.models import User, Team, Activity, Leaderboard, Workout
 from datetime import timedelta
 
 class Command(BaseCommand):
-    help = 'Populate the database with test data'
+    help = 'Populate the database with test data for development'
 
     def handle(self, *args, **kwargs):
         # Create test users 
