@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = 'Populate the database with test data'
 
     def handle(self, *args, **kwargs):
-        # Create test users
+        # Create test users 
         user1 = User.objects.create(username='john_doe', email='john@example.com', password='password123')
         user2 = User.objects.create(username='jane_doe', email='jane@example.com', password='password123')
 
