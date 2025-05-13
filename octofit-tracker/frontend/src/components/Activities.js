@@ -5,7 +5,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch(`${CODESPACE_API_SUFFIX}api/activity/`)
+    fetch(`https://symmetrical-parakeet-q745699xxhrwj-8000.app.github.dev/api/activities/`)
       .then(response => response.json())
       .then(data => setActivities(data))
       .catch(error => console.error('Error fetching activities:', error));
