@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { CODESPACE_API_SUFFIX } from '../settings';
 
 function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    const baseUrl = 'https://symmetrical-parakeet-q745699xxhrwj-8000.app.github.dev/api';
-    fetch(`${baseUrl}/activity/`)
+    fetch(`${CODESPACE_API_SUFFIX}api/activity/`)
       .then(response => response.json())
       .then(data => setActivities(data))
       .catch(error => console.error('Error fetching activities:', error));
