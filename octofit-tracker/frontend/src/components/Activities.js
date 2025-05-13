@@ -4,7 +4,8 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://symmetrical-parakeet-q745699xxhrwj-8000.app.github.dev/api/activity/')
+    const baseUrl = 'https://symmetrical-parakeet-q745699xxhrwj-8000.app.github.dev/api';
+    fetch(`${baseUrl}/activity/`)
       .then(response => response.json())
       .then(data => setActivities(data))
       .catch(error => console.error('Error fetching activities:', error));
